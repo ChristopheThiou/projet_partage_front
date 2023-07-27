@@ -3,9 +3,18 @@ import { Annonce } from "../../entities";
 
 const route = useRoute();
 
-const { data } = useFetch<Annonce>(
+const { data, refresh } = useFetch<Annonce>(
   "http://localhost:8000/api/annonce/id/" + route.params.id
 );
+
+
+
+async function removeAnnonce(annonce: Annonce) {
+  await $fetch("http://localhost:8000/api/annonce/" + route.params.id, {
+    method: "DELETE",
+  });
+  refresh();
+}
 </script>
 
 <template>
@@ -15,5 +24,8 @@ const { data } = useFetch<Annonce>(
     <p>Comment : {{ data.comment }}</p>
     <p>Status : {{ data.status }}</p>
     <p>Type : {{ data.type }}</p>
+    <form>
+      <button @click="removeAnnonce(data)">Delete</button>
+    </form>
   </div>
 </template>

@@ -4,6 +4,7 @@ import { Annonce } from "../entities";
 defineProps<{
   annonce: Annonce;
 }>();
+
 </script>
 
 <template>

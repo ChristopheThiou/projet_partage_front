@@ -2,10 +2,9 @@
 import { Annonce } from "entities";
 const route = useRoute()
 
-const { data } = useFetch<Annonce[]>("http://localhost:8000/api/annonce",{
+const { data, refresh } = useFetch<Annonce[]>("http://localhost:8000/api/annonce",{
   query:{search:route.query.search}
 });
-
 
 
 
