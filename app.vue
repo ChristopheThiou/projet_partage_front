@@ -70,10 +70,9 @@
 <script setup lang="ts">
 const term = ref('')
 
-
 const router = useRouter();
 
 function search() {
-  router.push({ path: "/annonces-list" });
+  router.push({ path: "/annonces-list", query:{search:term.value} });
 }
 </script>
