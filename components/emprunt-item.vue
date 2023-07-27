@@ -7,11 +7,18 @@ defineProps<{
 </script>
 
 <template>
-  <div>
-    <h3><NuxtLink :to="'/emprunt/'+emprunt._id">{{ emprunt.user.name }}</NuxtLink></h3>
-    <p>Accepted : {{ emprunt.accepted }}</p>
-    <p>Rendu : {{ emprunt.rendu }}</p>
-    <p>Duration : {{ emprunt.duration }}</p>
+  <div class="card mb-4" style="width: 18rem">
+    <div class="card-body">
+      <h5 class="card-title">{{ emprunt.user.name }}</h5>
+      <h6 class="card-subtitle mb-2 text-body-secondary">
+        Accepted : {{ emprunt.accepted }}
+      </h6>
+      <p class="card-text">Rendu : {{ emprunt.rendu }}</p>
+      <p class="card-text">Duration : {{ emprunt.duration }}</p>
+      <NuxtLink :to="'/emprunt/' + emprunt._id"
+        ><button class="btn btn-primary">Details</button></NuxtLink
+      >
+    </div>
   </div>
 </template>
 

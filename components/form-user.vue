@@ -20,7 +20,7 @@ function handleSubmite() {
     <label for="address">Address : </label>
     <input type="text" v-model="user.address" placeholder="Type a address ..." />
   </p>
-    <button>Add</button>
+    <button class="btn btn-primary">Add</button>
   </form>
 </template>
 

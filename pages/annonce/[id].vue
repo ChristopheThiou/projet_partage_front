@@ -43,7 +43,7 @@ const annonce = ref<Annonce>({
     <p>Status : {{ data.status }}</p>
     <p>Type : {{ data.type }}</p>
     <form>
-      <button @click="removeAnnonce()">Delete</button>
+      <button class="btn btn-danger" @click="removeAnnonce()">Delete</button>
     </form>
     <form @submit.prevent="handleSubmite()">
       <p>
@@ -86,7 +86,7 @@ const annonce = ref<Annonce>({
           placeholder="Type a type ..."
         />
       </p>
-      <button @click="updateAnnonce(annonce)">Edit</button>
+      <button class="btn btn-primary" @click="updateAnnonce(annonce)">Edit</button>
     </form>
   </div>
 </template>

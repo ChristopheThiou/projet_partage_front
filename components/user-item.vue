@@ -7,11 +7,17 @@ defineProps<{
 </script>
 
 <template>
-  <div>
-    <h3><NuxtLink :to="'/user/'+user._id">{{ user.name }}</NuxtLink></h3>
-    <p>Address : {{ user.address }}</p>
-    <p>List annonce : {{ user.listAnnonce }}</p>
-    <p>List emprunt : {{ user.listEmprunt }}</p>
+  <div class="card mb-4" style="width: 18rem">
+    <div class="card-body">
+      <h5 class="card-title">{{ user.name }}</h5>
+      <h6 class="card-subtitle mb-2 text-body-secondary">
+        Address : {{ user.address }}
+      </h6>
+      <p class="card-text">List annonce : {{ user.listAnnonce }}</p>
+      <p class="card-text">List emprunt : {{ user.listEmprunt }}</p>
+      <NuxtLink :to="'/user/' + user._id"
+        ><button class="btn btn-primary">Details</button></NuxtLink>
+    </div>
   </div>
 </template>
 

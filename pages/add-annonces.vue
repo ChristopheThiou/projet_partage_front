@@ -51,7 +51,7 @@ const annonce = ref<Annonce>({
       <label for="type">Type : </label>
       <input type="text" v-model="annonce.type" placeholder="Type a type ..." />
     </p>
-    <button>Add</button>
+    <button class="btn btn-primary">Add</button>
   </form>
 </template>
 
