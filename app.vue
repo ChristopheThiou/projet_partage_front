@@ -1,6 +1,6 @@
 <template>
   <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-secondary">
       <div class="container-fluid">
         <NuxtLink class="navbar-brand" to="/"
           ><img width="5%" src="/assets/images/echange.png" alt="icon"
@@ -68,11 +68,11 @@
 </template>
 
 <script setup lang="ts">
-const term = ref('')
+const term = ref("");
 
 const router = useRouter();
 
 function search() {
-  router.push({ path: "/annonces-list", query:{search:term.value} });
+  router.push({ path: "/annonces-list", query: { search: term.value } });
 }
 </script>
