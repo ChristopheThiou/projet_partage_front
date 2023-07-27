@@ -65,6 +65,13 @@
       <NuxtPage />
     </div>
   </div>
+  <footer>
+    <nav class="navbar navbar-expand-lg bg-body-secondary">
+      <div class="container-fluid">
+          <h1>Créer par Christouf la touf ©</h1>
+      </div>
+    </nav>
+  </footer>
 </template>
 
 <script setup lang="ts">
