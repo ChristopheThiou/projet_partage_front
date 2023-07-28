@@ -12,15 +12,26 @@ function handleSubmite() {
 
 <template>
   <form @submit.prevent="handleSubmite()">
-    <p>
-    <label for="name">Name : </label>
-    <input type="text" v-model="user.name" placeholder="Type a name ..." />
-  </p>
-  <p>
-    <label for="address">Address : </label>
-    <input type="text" v-model="user.address" placeholder="Type a address ..." />
-  </p>
-    <button class="btn btn-primary">Add</button>
+    <div class="mb-3">
+      <label for="name" class="form-label">Name : </label>
+      <input
+        type="text"
+        v-model="user.name"
+        class="form-control"
+        id="name"
+        aria-describedby="name"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="address" class="form-label">Address : </label>
+      <input
+        type="text"
+        v-model="user.address"
+        class="form-control"
+        id="address"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
   </form>
 </template>
 
